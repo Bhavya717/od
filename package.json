@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "server": "node server/index.js",
+    "server": "node server/index.cjs",
     "fullstack": "concurrently --kill-others-on-fail --names \"API,WEB\" --prefix-colors \"green,cyan\" \"npm run server\" \"npm run dev\""
   },
   "dependencies": {

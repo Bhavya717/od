@@ -31,9 +31,13 @@ mongoose
     console.log("✅ MongoDB connected");
     // Seed default data if empty
     await require("./seed")();
-    app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+    if (process.env.NODE_ENV !== "production") {
+      app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+    }
   })
   .catch((err) => {
     console.error("❌ MongoDB connection error:", err.message);
     process.exit(1);
   });
+
+module.exports = app;

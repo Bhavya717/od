@@ -1,4 +1,4 @@
-const BASE = "http://localhost:4000/api";
+const BASE = "/api";
 const TOKEN_KEY = "rb_token";
 
 export function getToken(): string | null {
